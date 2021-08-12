@@ -19,14 +19,15 @@ function Editor({ handleMaxiEditor, isMaximize, markdown, handleChange }) {
           value={markdown}
           onChange={(e) => handleChange(e)}
           className={
-            !isMaximize
-              ? "w-full overflow-y-auto input text-md font-radjani text-gray-900  bg-desaturated-blue px-2 pt-2 outline-none h-full"
-              : "w-full overflow-y-auto input text-md font-radjani text-gray-900  bg-desaturated-blue px-2 pt-2 outline-none h-screen"
+            !isMaximize ? commonStyles + " h-full" : commonStyles + " h-screen"
           }
         ></textarea>
       </article>
     </div>
   );
 }
+
+const commonStyles =
+  "w-full overflow-y-auto input text-md font-radjani text-gray-900  bg-desaturated-blue px-2 pt-2 outline-none";
 
 export default Editor;

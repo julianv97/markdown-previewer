@@ -11,14 +11,14 @@ function ToolBar({ title, handleMaxi, isMaximize, Icon }) {
           {title}
         </h3>
       </div>
-      <div className="pr-3 cursor-pointer hover:text-white">
+      <div
+        className="pr-3 cursor-pointer hover:text-white "
+        onClick={handleMaxi}
+      >
         {isMaximize ? (
-          <BsArrowsAngleContract
-            onClick={handleMaxi}
-            className="text-lg font-bold"
-          />
+          <BsArrowsAngleContract className="text-lg font-bold" />
         ) : (
-          <FaExpandArrowsAlt onClick={handleMaxi} />
+          <FaExpandArrowsAlt />
         )}
       </div>
     </div>
