@@ -10,7 +10,7 @@ function App() {
     <main className="bg-grayish-green">
       <section className=" w-full flex flex-col  justify-center items-center pt-10 ">
         <div className="w-5/12 border-2 border-gray-800 shadow-2xl mb-10">
-          <ToolBar title={"editorr"} />
+          <ToolBar title={"editor"} />
           <article className="w-full flex justify-center   ">
             <textarea
               name="textarea"
