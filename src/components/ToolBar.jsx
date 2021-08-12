@@ -1,10 +1,16 @@
 import React from 'react'
+import { FaExpandArrowsAlt } from 'react-icons/fa';
+import { GrContract } from 'react-icons/gr';
 
 function ToolBar({title}) {
     return (
-        <div>
+        <div className="flex justify-between">
             <h3>{title}</h3>
-            <p>icono</p>
+
+            <div>
+            <FaExpandArrowsAlt />
+            <GrContract />
+            </div>
         </div>
     )
 }

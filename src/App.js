@@ -4,6 +4,7 @@ import gfm from "remark-gfm";
 import data from "./initialData";
 import ToolBar from "./components/ToolBar";
 
+
 function App() {
   const [markdown, setMarkdown] = useState(data);
   return (
