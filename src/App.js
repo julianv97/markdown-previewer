@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
-import ToolBar from "./components/ToolBar";
 import data from "./initialData";
+import ToolBar from "./components/ToolBar";
 
 function App() {
   const [markdown, setMarkdown] = useState(data);
