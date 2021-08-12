@@ -4,6 +4,7 @@ function ToolBar({title}) {
     return (
         <div>
             <h3>{title}</h3>
+            <p>icono</p>
         </div>
     )
 }
