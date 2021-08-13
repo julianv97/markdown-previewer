@@ -14,7 +14,6 @@ function App() {
   const handleMaxiEditor = () => {
     setIsHiddenPreviewer(!isHiddenPreviewer);
     setIsMaximize(!isMaximize);
-    console.log("entra");
   };
 
   const handleMaxiPreviewer = () => {
