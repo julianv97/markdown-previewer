@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import ToolBar from "./ToolBar";
 import { RiEdit2Fill } from "react-icons/ri";
+import { StateContext } from "../App";
 
-function Editor({ handleMaxiEditor, isMaximize, markdown, handleChange }) {
+function Editor({ handleChange }) {
+  const { markdown, isMaximize, handleMaxiEditor } = useContext(StateContext);
   return (
     <div className={"w-5/12 border-2 border-gray-900 shadow-3xl mb-10 "}>
       <ToolBar
         title={"editor"}
         handleMaxi={handleMaxiEditor}
-        isMaximize={isMaximize}
         Icon={RiEdit2Fill}
       />
       <article className="w-full flex justify-center   ">

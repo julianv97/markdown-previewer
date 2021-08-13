@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaExpandArrowsAlt } from "react-icons/fa";
 import { BsArrowsAngleContract } from "react-icons/bs";
+import { StateContext } from "../App";
 
-function ToolBar({ title, handleMaxi, isMaximize, Icon }) {
+function ToolBar({ title, handleMaxi, Icon }) {
+  const { isMaximize } = useContext(StateContext);
   return (
     <div className="flex justify-between items-center h-8 bg-grayish-dark-green  border-b border-gray-800">
       <div className="flex items-center pl-2">

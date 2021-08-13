@@ -3,6 +3,8 @@ import data from "./initialData";
 import Editor from "./components/Editor";
 import Previewer from "./components/Previewer";
 
+export const StateContext = React.createContext();
+
 function App() {
   const [markdown, setMarkdown] = useState(data);
   const [isHiddenEditor, setIsHiddenEditor] = useState(false);
@@ -26,26 +28,17 @@ function App() {
   };
 
   return (
-    <main className="bg-grayish-green h-full min-h-screen">
-      <section className=" w-full flex flex-col  justify-center items-center pt-10 ">
-        {!isHiddenEditor && (
-          <Editor
-            handleMaxiEditor={handleMaxiEditor}
-            isMaximize={isMaximize}
-            markdown={markdown}
-            handleChange={handleChange}
-          />
-        )}
+    <StateContext.Provider
+      value={{ markdown, isMaximize, handleMaxiEditor, handleMaxiPreviewer }}
+    >
+      <main className="bg-grayish-green h-full min-h-screen">
+        <section className=" w-full flex flex-col  justify-center items-center pt-10 ">
+          {!isHiddenEditor && <Editor handleChange={handleChange} />}
 
-        {!isHiddenPreviewer && (
-          <Previewer
-            handleMaxiPreviewer={handleMaxiPreviewer}
-            isMaximize={isMaximize}
-            markdown={markdown}
-          />
-        )}
-      </section>
-    </main>
+          {!isHiddenPreviewer && <Previewer />}
+        </section>
+      </main>
+    </StateContext.Provider>
   );
 }
 
