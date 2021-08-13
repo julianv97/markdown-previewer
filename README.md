@@ -1,6 +1,6 @@
 # Grocery Bud
 
-App para llevar una lista para ir de compras.
+App para previsualizar Markdown.
 
 Realizado con React + TailwindCSS.
 
